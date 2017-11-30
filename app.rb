@@ -12,7 +12,7 @@ get('/question1') do
   erb(:question1)
 end
 
-post('/question1') do
+post('/a') do
   answer = params.fetch("question1")
   if (answer == "3")
     erb(:question2)
@@ -25,7 +25,7 @@ end
 #   erb(:question2)
 # end
 
-post('/question2') do
+post('/b') do
   answer = params.fetch("question2")
   if (answer == "ice cream")
     erb(:question3)
@@ -38,7 +38,7 @@ end
 #   erb(:question3)
 # end
 
-post('/question3') do
+post('/c') do
   answer = params.fetch("question3")
   if (answer == "man")
     erb(:success)
